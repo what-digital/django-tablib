@@ -35,7 +35,7 @@ class BaseDataset(tablib.Dataset):
     def _cleanval(self, value, attr):
         if callable(value):
             value = value()
-        elif value is None or tablib.compat.unicode(value) == "None":
+        elif value is None or str(value) == "None":
             value = ""
 
         if isinstance(value, bool):
