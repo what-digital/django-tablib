@@ -6,7 +6,7 @@ import tablib
 
 from django.template.defaultfilters import date
 from django.utils.encoding import force_str
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 mimetype_map = {
     'xls': 'application/vnd.ms-excel',
