@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-3.2 (2017-04-04)
+3.5 (2025-07-30)
 ----------------
 
 * Experimental Django 1.10 support
