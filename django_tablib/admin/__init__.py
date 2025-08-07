@@ -54,7 +54,7 @@ class TablibAdmin(admin.ModelAdmin):
         return info
 
     def get_urls(self):
-        from django.conf.urls import url
+        from django.urls import re_path
 
         def wrap(view):
             def wrapper(*args, **kwargs):
@@ -62,7 +62,7 @@ class TablibAdmin(admin.ModelAdmin):
             return update_wrapper(wrapper, view)
 
         urlpatterns = [
-            url(r'^tablib-export/(?P<export_format>\w+)/$',
+            re_path('tablib-export/(?P<export_format>\w+)/$',
                 wrap(self.tablib_export),
                 name='{0}_{1}_tablib_export'.format(*self.get_info())),
         ]
